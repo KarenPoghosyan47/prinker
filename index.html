@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/css/lib.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+
+</head>
+
+
+
+
+<body>
+    <div class="header">
+
+  
+        <div class="container">
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><svg width="146" height="42" viewBox="0 0 146 42" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <mask id="mask0_0_32" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                width="146" height="42">
+                                <rect width="146" height="42" fill="url(#pattern0)" />
+                            </mask>
+                            <g mask="url(#mask0_0_32)">
+                                <rect x="-15" width="174" height="42" fill="url(#paint0_linear_0_32)" />
+                            </g>
+                            <defs>
+                                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0_0_32" transform="scale(0.00684932 0.0238095)" />
+                                </pattern>
+                                <linearGradient id="paint0_linear_0_32" x1="149.5" y1="4.26087" x2="73.3678"
+                                    y2="69.8046" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#0064C0" />
+                                    <stop offset="1" stop-color="#E90391" />
+                                </linearGradient>
+                                <image id="image0_0_32" width="146" height="42"
+                                    xlink:href="data:image/png;base64,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" />
+                            </defs>
+                        </svg></a>
+                    <a class="a-nav-tel1 ms-auto" href="#">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12.5" cy="12.5" r="12.5" fill="url(#paint0_linear_0_240)" />
+                            <circle cx="12.4999" cy="12.5001" r="9.72222" fill="url(#paint1_linear_0_240)" />
+                            <path
+                                d="M16.4422 14.5493L14.7205 13.7246C14.647 13.6896 14.5652 13.6822 14.4876 13.7036C14.41 13.7249 14.3407 13.7739 14.2901 13.8431L13.5276 14.8843C12.331 14.2537 11.368 13.1774 10.8039 11.8401L11.7354 10.9879C11.7975 10.9315 11.8414 10.854 11.8605 10.7672C11.8797 10.6804 11.873 10.589 11.8415 10.5069L11.1036 8.58263C11.069 8.49405 11.0079 8.42172 10.9307 8.37813C10.8536 8.33453 10.7652 8.3224 10.6809 8.34382L9.08219 8.75615C9.00089 8.77713 8.92836 8.82829 8.87644 8.90128C8.82451 8.97426 8.79625 9.06476 8.79626 9.15801C8.79626 13.5648 11.9921 17.1298 15.9289 17.1298C16.0124 17.1299 16.0934 17.0983 16.1587 17.0402C16.224 16.9822 16.2698 16.9011 16.2886 16.8102L16.6575 15.0235C16.6766 14.9288 16.6655 14.8296 16.6262 14.7431C16.5869 14.6565 16.5218 14.588 16.4422 14.5493Z"
+                                fill="white" />
+                            <defs>
+                                <linearGradient id="paint0_linear_0_240" x1="21.0648" y1="1.62037" x2="3.93518"
+                                    y2="23.1481" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#E90391" />
+                                    <stop offset="1" stop-color="#0064C0" />
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_0_240" x1="19.1615" y1="4.03812" x2="6.97594"
+                                    y2="19.7917" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#E90391" />
+                                    <stop offset="1" stop-color="#0064C0" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto ms-auto my-2 my-lg-0 navbar-nav-scroll"
+                            style="--bs-scroll-height: 100px;">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">О продукте</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Товары</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Аренда принтера</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Контакты</a>
+                            </li>
+                        </ul>
+                        <a class="a-nav-tel" href="#">
+                            <svg width="54" height="54" viewBox="0 0 54 54" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="27" cy="27" r="27" fill="url(#paint0_linear_0_531)" />
+                                <circle cx="27" cy="27" r="21" fill="url(#paint1_linear_0_531)" />
+                                <path
+                                    d="M35.5152 31.4261L31.7964 29.6448C31.6375 29.5691 31.461 29.5532 31.2933 29.5994C31.1256 29.6455 30.9759 29.7513 30.8667 29.9009L29.2198 32.1497C26.6351 30.7877 24.555 28.4629 23.3364 25.5742L25.3485 23.7335C25.4826 23.6117 25.5775 23.4444 25.6188 23.2569C25.6601 23.0694 25.6457 22.8719 25.5777 22.6945L23.9839 18.5381C23.9092 18.3468 23.7771 18.1906 23.6105 18.0964C23.4438 18.0022 23.2529 17.976 23.0708 18.0223L19.6176 18.9129C19.442 18.9583 19.2853 19.0688 19.1732 19.2264C19.061 19.384 19 19.5795 19 19.7809C19 29.2997 25.903 37 34.4065 37C34.5868 37.0001 34.7618 36.9319 34.9029 36.8066C35.044 36.6812 35.1429 36.5061 35.1835 36.3098L35.9804 32.4503C36.0215 32.2458 35.9976 32.0316 35.9127 31.8447C35.8277 31.6577 35.6872 31.5097 35.5152 31.4261Z"
+                                    fill="white" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_0_531" x1="45.5" y1="3.5" x2="8.5" y2="50"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#E90391" />
+                                        <stop offset="1" stop-color="#0064C0" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_0_531" x1="41.3889" y1="8.72223" x2="15.0682"
+                                        y2="42.75" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#E90391" />
+                                        <stop offset="1" stop-color="#0064C0" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            8(925)248-55-84
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="header-cont">
+        <div class="container">
+            <div class="div-text-btn">
+                <h1>Принтер Prinker S — создан,<br>
+                    чтобы привлекать внимание</h1>
+                <div class="div-lin1">
+                    <div class="lin"></div>
+                </div>
+
+                <p>Как Вы думаете, какая реклама самая запоминающаяся? Конечно <br> же, та, которая сумела
+                    произвести впечатление. С компактным <br> современным устройством Prinker S !</p>
+                <div class="">
+
+                </div>
+                <img src="./img/Фото 1 экрана.png" alt="">
+
+                <div class="header-btns">
+                    <button type="button" class="btn bttn  header-btn"> Заказать принтер</button>
+                    <div class="header-btn1-div">
+                        <button type="button" class="inner-element btn header-btn1">Смотреть видео
+                        </button>
+
+                    </div>
+
+
+                </div>
+                <a class="header-a" href="#">
+                    <svg width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.6763 17.0957C14.0758 17.8547 12.9242 17.8547 12.3237 17.0957L2.50115 4.68071C1.72308 3.69728 2.4235 2.25 3.67749 2.25H23.3225C24.5765 2.25 25.2769 3.69728 24.4989 4.68071L14.6763 17.0957Z"
+                            stroke="url(#paint0_linear_0_42)" stroke-width="3" />
+                        <defs>
+                            <linearGradient id="paint0_linear_0_42" x1="19.3039" y1="3.85135" x2="9.7951" y2="18.3953"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#E90391" />
+                                <stop offset="1" stop-color="#0064C0" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    Подробности ниже
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="services">
+        <div class="container">
+            <div class="services-text">
+                <h2>Наши услуги по аренде Prinker S</h2>
+                <div class="div-lin">
+                    <div class="lin"></div>
+                </div>
+                <p class="services-p"> Сделайте ваши мероприятия выдающимися и выделяющимися, <br> смело применяя индивидуальный дизайн
+                    татуировки!</p>
+            </div>
+            <!-- <div class="row ">
+                <div class="col">
+                    <div class="col-cont">
+                        <h4>01</h4>
+                        <p>Разработка уникальных дизайнов под ваше событие или мероприятие</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col-cont">
+                        <h4>02</h4>
+                        <p>Аренда Prinker S в зависимости от масштабов события и времени работы</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col-cont">
+                        <h4>03</h4>
+                        <p>Квалифицированный персонал либо обучим вашего сотрудника</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col-cont">
+                        <h4>04</h4>
+                        <p>Доступ к бесконечному множеству рисунков для нанесния</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col-cont">
+                        <h4>05</h4>
+                        <p>Доставка и забор необходимого оборудования</p>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="services-divs">
+                <div class="services-div ms-auto me-auto">
+                    <h4>01</h4>
+                    <p>Разработка уникальных дизайнов под ваше событие или мероприятие</p>
+                </div>
+                <div class="services-div ms-auto me-auto">
+                    <h4>02</h4>
+                    <p>Аренда Prinker S в зависимости от масштабов события и времени работы</p>                </div>
+                <div class="services-div ms-auto me-auto">
+                    <h4>03</h4>
+                    <p>Квалифицированный персонал либо обучим вашего сотрудника</p>
+                </div>
+                <div class="services-div ms-auto me-auto">
+                    <h4>04</h4>
+                    <p>Доступ к бесконечному множеству рисунков для нанесния</p>
+                </div>
+                <div class="services-div ms-auto me-auto">
+                    <h4>05</h4>
+                    <p>Доставка и забор необходимого оборудования</p>
+                </div>
+            </div>
+
+
+            <div class="div-sevices-btn">
+                <button type="button" class="btn bttn  services-btn">Заказать принтер</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="info">
+        <div class="container">
+            <div class="info-text-btn">
+                <h2>Немного о Prinker S</h2>
+                <div class="div-lin1">
+                    <div class="lin"></div>
+                </div>
+                <p class="p-info">PRINKER S - это абсолютно новое и уникальное средство для <br> коммуникации с
+                    потребителем.
+                    С помощью временных татуировок Вы <br> сможете донести информацию о своем бренде, событии или
+                    акции,<br>
+                    визуализируя логотипы, слоганы и многое другое!
+                </p>
+                <h3>Данный гаджет вы можете использовать:</h3>
+                <p><svg class="" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15 7.5C15 11.6421 11.6421 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5ZM3 7.5C3 9.98528 5.01472 12 7.5 12C9.98528 12 12 9.98528 12 7.5C12 5.01472 9.98528 3 7.5 3C5.01472 3 3 5.01472 3 7.5Z"
+                            fill="url(#paint0_linear_0_93)" />
+                        <defs>
+                            <linearGradient id="paint0_linear_0_93" x1="2.23517e-07" y1="2.5" x2="18.5" y2="17.5"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#E90391" />
+                                <stop offset="1" stop-color="#0064C0" />
+                            </linearGradient>
+                        </defs>
+                    </svg>На культурных и спортивных мероприятиях</p>
+                <p><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15 7.5C15 11.6421 11.6421 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5ZM3 7.5C3 9.98528 5.01472 12 7.5 12C9.98528 12 12 9.98528 12 7.5C12 5.01472 9.98528 3 7.5 3C5.01472 3 3 5.01472 3 7.5Z"
+                            fill="url(#paint0_linear_0_93)" />
+                        <defs>
+                            <linearGradient id="paint0_linear_0_93" x1="2.23517e-07" y1="2.5" x2="18.5" y2="17.5"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#E90391" />
+                                <stop offset="1" stop-color="#0064C0" />
+                            </linearGradient>
+                        </defs>
+                    </svg>В мотивационных программах у точек продаж</p>
+                <p><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15 7.5C15 11.6421 11.6421 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5ZM3 7.5C3 9.98528 5.01472 12 7.5 12C9.98528 12 12 9.98528 12 7.5C12 5.01472 9.98528 3 7.5 3C5.01472 3 3 5.01472 3 7.5Z"
+                            fill="url(#paint0_linear_0_93)" />
+                        <defs>
+                            <linearGradient id="paint0_linear_0_93" x1="2.23517e-07" y1="2.5" x2="18.5" y2="17.5"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#E90391" />
+                                <stop offset="1" stop-color="#0064C0" />
+                            </linearGradient>
+                        </defs>
+                    </svg>В уличном маркетинге</p>
+                <p><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15 7.5C15 11.6421 11.6421 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5ZM3 7.5C3 9.98528 5.01472 12 7.5 12C9.98528 12 12 9.98528 12 7.5C12 5.01472 9.98528 3 7.5 3C5.01472 3 3 5.01472 3 7.5Z"
+                            fill="url(#paint0_linear_0_93)" />
+                        <defs>
+                            <linearGradient id="paint0_linear_0_93" x1="2.23517e-07" y1="2.5" x2="18.5" y2="17.5"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#E90391" />
+                                <stop offset="1" stop-color="#0064C0" />
+                            </linearGradient>
+                        </defs>
+                    </svg>На вечеринках и свадьбах</p>
+                <p><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15 7.5C15 11.6421 11.6421 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5ZM3 7.5C3 9.98528 5.01472 12 7.5 12C9.98528 12 12 9.98528 12 7.5C12 5.01472 9.98528 3 7.5 3C5.01472 3 3 5.01472 3 7.5Z"
+                            fill="url(#paint0_linear_0_93)" />
+                        <defs>
+                            <linearGradient id="paint0_linear_0_93" x1="2.23517e-07" y1="2.5" x2="18.5" y2="17.5"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#E90391" />
+                                <stop offset="1" stop-color="#0064C0" />
+                            </linearGradient>
+                        </defs>
+                    </svg>На ярмарках и выставках</p>
+                <p><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15 7.5C15 11.6421 11.6421 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5ZM3 7.5C3 9.98528 5.01472 12 7.5 12C9.98528 12 12 9.98528 12 7.5C12 5.01472 9.98528 3 7.5 3C5.01472 3 3 5.01472 3 7.5Z"
+                            fill="url(#paint0_linear_0_93)" />
+                        <defs>
+                            <linearGradient id="paint0_linear_0_93" x1="2.23517e-07" y1="2.5" x2="18.5" y2="17.5"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#E90391" />
+                                <stop offset="1" stop-color="#0064C0" />
+                            </linearGradient>
+                        </defs>
+                    </svg>На корпоративах</p>
+                <img class="info-img" src="./img/Слой 1.png" alt="">
+
+                <div class="btn-info">
+                    <button type="button" class="btn bttn  info-btn">Узнать подробнее</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="vidio">
+        <div class="container">
+            <h1>Посмотрите видео о Prinker</h1>
+            <div class="div-lin">
+                <div class="lin"></div>
+            </div>
+            <div class="swiper mySwiper1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                        </iframe>
+                    </div>
+                    <div class="swiper-slide">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                        </iframe>
+                    </div>
+                    <div class="swiper-slide">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+        </div>
+    </div>
+
+
+    <div class="why">
+        <div class="container">
+            <h2>Почему выбирают нас</h2>
+            <div class="div-lin">
+                <div class="lin"></div>
+            </div>
+            <div class="row  align-items-center top-row  mb-2">
+                <div class="col-12 colls col-lg-4">
+                    <div class="col-cont">
+                        <div>
+                            <img src="./img/Group 3.png" alt="">
+                        </div>
+                        <p>Количество дизайнов вы <br> можете получить с Prinker</p>
+                    </div>
+                </div>
+                <div class="col-12 colls col-lg-4">
+                    <div class="col-cont">
+                        <div>
+                            <img src="./img/Group 4.png" alt="">
+                        </div>
+                        <p>За 3 секунды Prinker перенесет <br> татуировку на кожу</p>
+                    </div>
+                </div>
+                <div class="col-12 colls col-lg-4">
+                    <div class="col-cont">
+                        <div>
+                            <img src="./img/Group 5.png" alt="">
+                        </div>
+                        <p>Ваше тату сохранится в <br>
+                            течении 1-3 дней</p>
+                    </div>
+                </div>
+                <div class="col-12 colls col-lg-4">
+                    <div class="col-cont">
+                        <div>
+                            <img src="./img/Group 6.png" alt="">
+                        </div>
+                        <p>Вся цвета доступна вам при <br> создании тату с помощью Prinker</p>
+                    </div>
+                </div>
+                <div class="col-12 colls col-lg-4">
+                    <div class="col-cont">
+                        <div>
+                            <img src="./img/Group 7.png" alt="">
+                        </div>
+                        <p style="width: 311px;                        ">Изготовлен из сертифицированных <br>
+                            ингредиентов и дерматологически <br> протестирован</p>
+                    </div>
+                </div>
+                <div class="col-12 colls col-lg-4">
+                    <div class="col-cont">
+                        <div>
+                            <img src="./img/Group 8.png" alt="">
+                        </div>
+                        <p>Не смывается водой, но легко <br> удаляется при помощи обычного <br> мыла</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="galleria">
+        <div class="container">
+            <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="rectangle"></div>
+                        <div class="rectangle1"></div>
+                        <div class="container-galleria">
+                            <div class="row">
+                                <div class="col-lg-8 mb-4">
+                                    <div class="div-img" style="height: 415px;">
+                                        <img src="/img/1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-4">
+                                    <div class="div-img" style="height: 415px;">
+                                        <img src="/img/1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="div-img">
+                                        <img src="/img/1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="div-img">
+                                        <img src="/img/1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="div-img">
+                                        <img src="/img/1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="rectangle"></div>
+                        <div class="rectangle1"></div>
+                        <div class="container-galleria">
+                            <div class="row">
+                                <div class="col-lg-8 mb-4">
+                                    <div class="div-img" style="height: 415px;">
+                                        <img src="/img/1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-4">
+                                    <div class="div-img">
+                                        <img src="/img/1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="div-img">
+                                        <img src="/img/1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="div-img">
+                                        <img src="/img/1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="div-img">
+                                        <img src="/img/1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="rectangle"></div>
+                        <div class="rectangle1"></div>
+                        <div class="container-galleria">
+                            <div class="row">
+                                <div class="col-lg-8 mb-4">
+                                    <div class="div-img" style="height: 415px;">
+                                        <img src="/img/1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-4">
+                                    <div class="div-img">
+                                        <img src="/img/1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="div-img">
+                                        <img src="/img/1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="div-img">
+                                        <img src="/img/1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="div-img">
+                                        <img src="/img/1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination1"></div>
+        </div>
+    </div>
+
+    <div class="galleria1">
+        <div class="container">
+            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="/img/1.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/1.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/1.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/1.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/1.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/1.png" alt="">
+                    </div>
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="certificates">
+        <div class="container">
+            <h1>Наши сертификаты</h1>
+            <div class="div-lin">
+                <div class="lin"></div>
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./img/unnamed 1.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/unnamed 1.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/unnamed 1.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/unnamed 1.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/unnamed 1.png" alt=""></div>
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="certificates1">
+        <h1>Наши сертификаты</h1>
+        <div class="div-lin">
+            <div class="lin"></div>
+        </div>
+        <div class="imgs">
+            <div class="ms-auto me-auto"><img src="./img/unnamed 1.png" alt=""></div>
+            <div class="ms-auto me-auto"><img src="./img/unnamed 1.png" alt=""></div>
+            <div class="ms-auto me-auto"><img src="./img/unnamed 1.png" alt=""></div>
+            <div class="ms-auto me-auto"><img src="./img/unnamed 1.png" alt=""></div>
+            <div class="ms-auto me-auto"><img src="./img/unnamed 1.png" alt=""></div>
+        </div>
+    </div>
+
+    <div class="register">
+        <div class="container">
+            <img class="register-img" src="./img/Карта 1.png" alt="">
+            <h2>Аренда принтера</h2>
+            <p>Закажите ваш Prinker сейчас или свяжитесь с нашей командой<br> для организации мероприятий!</p>
+            <div class="register-div">
+                <div class="div-register">
+                    <div class="container">
+                        <div class="d-flex flex-column align-items-center ">
+                            <div class="form-floating">
+                                <input type="text" placeholder="Ваше ФИО" aria-label="name"
+                                    class="inputss  mb-lg-0 mb-2" style="padding-left: 40px; " />
+                                <svg class="svg-register" width="15" height="17" viewBox="0 0 15 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.5 9.5625C9.8291 9.5625 11.7188 7.4209 11.7188 4.78125C11.7188 2.1416 9.8291 0 7.5 0C5.1709 0 3.28125 2.1416 3.28125 4.78125C3.28125 7.4209 5.1709 9.5625 7.5 9.5625ZM11.25 10.625H9.63574C8.98535 10.9637 8.26172 11.1562 7.5 11.1562C6.73828 11.1562 6.01758 10.9637 5.36426 10.625H3.75C1.67871 10.625 0 12.5275 0 14.875V15.4062C0 16.2861 0.629883 17 1.40625 17H13.5938C14.3701 17 15 16.2861 15 15.4062V14.875C15 12.5275 13.3213 10.625 11.25 10.625Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <div class="form-floating">
+                                <input type="tel" placeholder="Телефон" aria-label="tel" class="inputss  mb-lg-0 mb-2"
+                                    style="padding-left: 40px; " />
+                                <svg class="svg-register" width="15" height="17" viewBox="0 0 15 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M14.4551 0.817139L11.4083 0.0202805C11.0772 -0.0660458 10.7374 0.129848 10.6026 0.481794L9.19641 4.20047C9.07336 4.52585 9.15539 4.90768 9.39855 5.13013L11.1739 6.77697C10.1192 9.3236 8.2765 11.4419 5.9826 12.6604L4.52951 10.6484C4.3303 10.3728 3.99632 10.2798 3.70921 10.4193L0.428031 12.013C0.114561 12.169 -0.0582874 12.5542 0.0178829 12.9294L0.720994 16.3824C0.794234 16.741 1.07548 17 1.40653 17C8.9093 17 15 10.1105 15 1.59408C15 1.22221 14.7744 0.900145 14.4551 0.817139Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+
+                            <div class="form-floating">
+                                <input type="email" placeholder="E-mail" aria-label="First name"
+                                    class="inputss  mb-lg-0 mb-2" style="padding-left: 40px; " />
+                                <svg class="svg-register" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.6969 4.29271C15.8187 4.18776 16 4.28594 16 4.45182V11.375C16 12.2721 15.3281 13 14.5 13H1.5C0.671875 13 0 12.2721 0 11.375V4.45521C0 4.28594 0.178125 4.19115 0.303125 4.29609C1.00312 4.88516 1.93125 5.63333 5.11875 8.14193C5.77813 8.66328 6.89062 9.76016 8 9.75339C9.11563 9.76354 10.25 8.64297 10.8844 8.14193C14.0719 5.63333 14.9969 4.88177 15.6969 4.29271ZM8 8.66667C8.725 8.68021 9.76875 7.67813 10.2937 7.2651C14.4406 4.00495 14.7562 3.72057 15.7125 2.90807C15.8937 2.75573 16 2.51875 16 2.26823V1.625C16 0.727865 15.3281 0 14.5 0H1.5C0.671875 0 0 0.727865 0 1.625V2.26823C0 2.51875 0.10625 2.75234 0.2875 2.90807C1.24375 3.71719 1.55938 4.00495 5.70625 7.2651C6.23125 7.67813 7.275 8.68021 8 8.66667Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <div class="form-floating">
+                                <input type="text" placeholder="Комментарий" aria-label="First name"
+                                    class="inputss1  mb-lg-0 mb-2" style="padding-left: 40px; " />
+                                <svg class="svg-register" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.1833 2.59738L13.6889 5.41668C13.7944 5.53546 13.7944 5.72924 13.6889 5.84802L7.62222 12.6744L5.04444 12.9963C4.7 13.04 4.40833 12.7119 4.44722 12.3243L4.73333 9.42372L10.8 2.59738C10.9056 2.47861 11.0778 2.47861 11.1833 2.59738ZM15.6833 1.88162L14.3278 0.35632C13.9056 -0.118773 13.2194 -0.118773 12.7944 0.35632L11.8111 1.46279C11.7056 1.58156 11.7056 1.77535 11.8111 1.89412L14.3167 4.71342C14.4222 4.83219 14.5944 4.83219 14.7 4.71342L15.6833 3.60695C16.1056 3.12874 16.1056 2.35671 15.6833 1.88162ZM10.6667 10.8177V13.9996H1.77778V3.99766H8.16111C8.25 3.99766 8.33333 3.95702 8.39722 3.88826L9.50833 2.63802C9.71944 2.40047 9.56944 1.99727 9.27222 1.99727H1.33333C0.597222 1.99727 0 2.66927 0 3.49756V14.4997C0 15.328 0.597222 16 1.33333 16H11.1111C11.8472 16 12.4444 15.328 12.4444 14.4997V9.56749C12.4444 9.23305 12.0861 9.0674 11.875 9.30182L10.7639 10.5521C10.7028 10.624 10.6667 10.7177 10.6667 10.8177Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+
+                        </div>
+
+                        <div class="form-check-register">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label checkbox-text-registr" for="flexCheckDefault">
+                                Я согласен с <a href="">политикой конфиденциальности.</a>
+                            </label>
+                        </div>
+                        <div class="btn-register">
+                            <button type="button" class="btn bttn  register-btn">Заказать принтер</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  
+  
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="col-div1">
+                        <a href="">
+                            <svg width="18" height="15" viewBox="0 0 18 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.659 4.95312C17.7961 4.83203 18 4.94531 18 5.13672V13.125C18 14.1602 17.2441 15 16.3125 15H1.6875C0.755859 15 0 14.1602 0 13.125V5.14062C0 4.94531 0.200391 4.83594 0.341016 4.95703C1.12852 5.63672 2.17266 6.5 5.75859 9.39453C6.50039 9.99609 7.75195 11.2617 9 11.2539C10.2551 11.2656 11.5312 9.97266 12.2449 9.39453C15.8309 6.5 16.8715 5.63281 17.659 4.95312ZM9 10C9.81563 10.0156 10.9898 8.85938 11.5805 8.38281C16.2457 4.62109 16.6008 4.29297 17.6766 3.35547C17.8805 3.17969 18 2.90625 18 2.61719V1.875C18 0.839844 17.2441 0 16.3125 0H1.6875C0.755859 0 0 0.839844 0 1.875V2.61719C0 2.90625 0.119531 3.17578 0.323437 3.35547C1.39922 4.28906 1.7543 4.62109 6.41953 8.38281C7.01016 8.85938 8.18437 10.0156 9 10Z"
+                                    fill="url(#paint0_linear_0_214)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_0_214" x1="20.5" y1="1.00831e-07"
+                                        x2="-1.13249e-06" y2="18" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#E90391" />
+                                        <stop offset="1" stop-color="#0064C0" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            rent@myprinker.ru - Аренда
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 div3-3">
+                    <div class="col-div3">
+                        <a href="">
+                            <svg width="18" height="15" viewBox="0 0 18 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.659 4.95312C17.7961 4.83203 18 4.94531 18 5.13672V13.125C18 14.1602 17.2441 15 16.3125 15H1.6875C0.755859 15 0 14.1602 0 13.125V5.14062C0 4.94531 0.200391 4.83594 0.341016 4.95703C1.12852 5.63672 2.17266 6.5 5.75859 9.39453C6.50039 9.99609 7.75195 11.2617 9 11.2539C10.2551 11.2656 11.5312 9.97266 12.2449 9.39453C15.8309 6.5 16.8715 5.63281 17.659 4.95312ZM9 10C9.81563 10.0156 10.9898 8.85938 11.5805 8.38281C16.2457 4.62109 16.6008 4.29297 17.6766 3.35547C17.8805 3.17969 18 2.90625 18 2.61719V1.875C18 0.839844 17.2441 0 16.3125 0H1.6875C0.755859 0 0 0.839844 0 1.875V2.61719C0 2.90625 0.119531 3.17578 0.323437 3.35547C1.39922 4.28906 1.7543 4.62109 6.41953 8.38281C7.01016 8.85938 8.18437 10.0156 9 10Z"
+                                    fill="url(#paint0_linear_0_214)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_0_214" x1="20.5" y1="1.00831e-07"
+                                        x2="-1.13249e-06" y2="18" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#E90391" />
+                                        <stop offset="1" stop-color="#0064C0" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            rent@myprinker.ru - Франшиза
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 ">
+                    <div class="col-div2">
+                        <a href="">
+                            <svg width="17" height="19" viewBox="0 0 17 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.5152 13.4261L12.7964 11.6448C12.6375 11.5691 12.461 11.5532 12.2933 11.5994C12.1256 11.6455 11.9759 11.7513 11.8667 11.9009L10.2198 14.1497C7.63511 12.7877 5.55505 10.4629 4.3364 7.57419L6.34855 5.73353C6.48258 5.61169 6.57745 5.44436 6.61879 5.25687C6.66013 5.06939 6.64569 4.87195 6.57765 4.69445L4.98388 0.53813C4.90921 0.346794 4.77714 0.190574 4.61045 0.0964089C4.44376 0.00224336 4.2529 -0.0239658 4.07077 0.0223006L0.617589 0.912941C0.441997 0.958259 0.285334 1.06876 0.173169 1.2264C0.0610036 1.38405 -4.04491e-05 1.57953 2.01088e-08 1.78094C2.01088e-08 11.2997 6.90305 19 15.4065 19C15.5868 19.0001 15.7618 18.9319 15.9029 18.8066C16.044 18.6812 16.1429 18.5061 16.1835 18.3098L16.9804 14.4503C17.0215 14.2458 16.9976 14.0316 16.9127 13.8447C16.8277 13.6577 16.6872 13.5097 16.5152 13.4261Z"
+                                    fill="url(#paint0_linear_0_224)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_0_224" x1="17" y1="2" x2="5" y2="22"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#E90391" />
+                                        <stop offset="1" stop-color="#0064C0" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            8(925)248-55-84
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 div3">
+                    <div class="col-div3">
+                        <a href="">
+                            <svg width="18" height="15" viewBox="0 0 18 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.659 4.95312C17.7961 4.83203 18 4.94531 18 5.13672V13.125C18 14.1602 17.2441 15 16.3125 15H1.6875C0.755859 15 0 14.1602 0 13.125V5.14062C0 4.94531 0.200391 4.83594 0.341016 4.95703C1.12852 5.63672 2.17266 6.5 5.75859 9.39453C6.50039 9.99609 7.75195 11.2617 9 11.2539C10.2551 11.2656 11.5312 9.97266 12.2449 9.39453C15.8309 6.5 16.8715 5.63281 17.659 4.95312ZM9 10C9.81563 10.0156 10.9898 8.85938 11.5805 8.38281C16.2457 4.62109 16.6008 4.29297 17.6766 3.35547C17.8805 3.17969 18 2.90625 18 2.61719V1.875C18 0.839844 17.2441 0 16.3125 0H1.6875C0.755859 0 0 0.839844 0 1.875V2.61719C0 2.90625 0.119531 3.17578 0.323437 3.35547C1.39922 4.28906 1.7543 4.62109 6.41953 8.38281C7.01016 8.85938 8.18437 10.0156 9 10Z"
+                                    fill="url(#paint0_linear_0_214)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_0_214" x1="20.5" y1="1.00831e-07"
+                                        x2="-1.13249e-06" y2="18" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#E90391" />
+                                        <stop offset="1" stop-color="#0064C0" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            rent@myprinker.ru - Франшиза
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="col-div4">
+                        <a href="">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.5023 4.87225C7.52276 4.87225 5.11941 7.16166 5.11941 10C5.11941 12.8383 7.52276 15.1277 10.5023 15.1277C13.4819 15.1277 15.8853 12.8383 15.8853 10C15.8853 7.16166 13.4819 4.87225 10.5023 4.87225ZM10.5023 13.3337C8.57685 13.3337 7.00273 11.8387 7.00273 10C7.00273 8.16133 8.57217 6.6663 10.5023 6.6663C12.4325 6.6663 14.002 8.16133 14.002 10C14.002 11.8387 12.4278 13.3337 10.5023 13.3337ZM17.361 4.6625C17.361 5.32746 16.7988 5.85853 16.1055 5.85853C15.4074 5.85853 14.8499 5.32299 14.8499 4.6625C14.8499 4.00201 15.4121 3.46647 16.1055 3.46647C16.7988 3.46647 17.361 4.00201 17.361 4.6625ZM20.9262 5.87638C20.8466 4.27424 20.4624 2.85507 19.2303 1.68582C18.0028 0.516568 16.5131 0.150619 14.8312 0.070289C13.0978 -0.0234297 7.90223 -0.0234297 6.16882 0.070289C4.49163 0.146156 3.00184 0.512105 1.76972 1.68136C0.537591 2.85061 0.158115 4.26978 0.0737869 5.87192C-0.0245956 7.52315 -0.0245956 12.4724 0.0737869 14.1236C0.15343 15.7258 0.537591 17.1449 1.76972 18.3142C3.00184 19.4834 4.48695 19.8494 6.16882 19.9297C7.90223 20.0234 13.0978 20.0234 14.8312 19.9297C16.5131 19.8538 18.0028 19.4879 19.2303 18.3142C20.4577 17.1449 20.8419 15.7258 20.9262 14.1236C21.0246 12.4724 21.0246 7.52761 20.9262 5.87638ZM18.6868 15.8953C18.3214 16.7701 17.614 17.4439 16.6911 17.7965C15.309 18.3186 12.0296 18.1981 10.5023 18.1981C8.97507 18.1981 5.69096 18.3142 4.31361 17.7965C3.39537 17.4484 2.68795 16.7745 2.31785 15.8953C1.76972 14.5788 1.89621 11.4549 1.89621 10C1.89621 8.54513 1.7744 5.41671 2.31785 4.10465C2.68327 3.22995 3.39069 2.55606 4.31361 2.2035C5.69565 1.68136 8.97507 1.80185 10.5023 1.80185C12.0296 1.80185 15.3137 1.68582 16.6911 2.2035C17.6093 2.5516 18.3167 3.22548 18.6868 4.10465C19.235 5.42118 19.1085 8.54513 19.1085 10C19.1085 11.4549 19.235 14.5833 18.6868 15.8953Z"
+                                    fill="url(#paint0_linear_0_226)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_0_226" x1="24" y1="1.27723e-09" x2="2.5" y2="22.5"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#E90391" />
+                                        <stop offset="1" stop-color="#0064C0" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            myprinker.ru
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="col-div5">
+                        <a href="">
+                            <svg width="13" height="21" viewBox="0 0 13 21" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.1481 11.8125L12.8222 8.01199H8.60725V5.54572C8.60725 4.50598 9.19605 3.49248 11.0838 3.49248H13V0.256758C13 0.256758 11.2611 0 9.59853 0C6.12738 0 3.85847 1.82027 3.85847 5.11547V8.01199H0V11.8125H3.85847V21H8.60725V11.8125H12.1481Z"
+                                    fill="url(#paint0_linear_0_229)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_0_229" x1="16.5" y1="6.02772e-08" x2="3.893"
+                                        y2="21.5231" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#E90391" />
+                                        <stop offset="1" stop-color="#0064C0" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            myprinker.ru
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p>Москва 2020 © Все права защищены</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="dist/js/script.js"></script>
+
+
+</body>
+
+</html>
